@@ -18,7 +18,7 @@
             <v-list-item-title>로그인</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item v-else router :to="{name : 'mypage'}">
+        <v-list-item v-else router :to="{name : 'mytodo'}">
           <v-list-item-action>
             <v-icon>mdi-contact-mail</v-icon>
           </v-list-item-action>
@@ -41,7 +41,7 @@
             </v-btn>
           </template>
           <v-list>
-            <v-list-item router :to="{name: 'mypage'}">
+            <v-list-item router :to="{name: 'mytodo'}">
               <v-list-item-title>마이페이지</v-list-item-title>
             </v-list-item>
             <v-list-item v-if="isLogin === false" router :to="{name: 'login'}">

@@ -12,7 +12,7 @@ export default new Vuex.Store({
       { email: "woong1@naver.com", password: "1234", name: "재웅" }
     ],
     isLogin: false,
-    isLoginError: false
+    isLoginError: false,
   },
   //mutations : 스테이트값을 변화시키는 로직
   mutations: {
@@ -52,14 +52,14 @@ export default new Vuex.Store({
         commit("isLoginError");
       } else {
         commit("loginSuccess", selectedUser);
-        router.push({ name: "mypage" });
+        router.push({ name: "mytodo" });
       }
       //그 유저의 비밀번호와 입력된 비밀번호를 비교한다
     },
     logout({ commit }) {
       commit("logout");
       router.push({ name: "home" });
-    }
+    },
   },
   modules: {}
 });
